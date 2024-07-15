@@ -3,11 +3,11 @@ addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
 });
 
-const dockerHub = "https://registry-1.docker.io";
+// const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  "docker.libcuda.so": dockerHub,
+  // "docker.libcuda.so": dockerHub,
   "quay.libcuda.so": "https://quay.io",
   "gcr.libcuda.so": "https://gcr.io",
   "k8s-gcr.libcuda.so": "https://k8s.gcr.io",
@@ -17,7 +17,7 @@ const routes = {
   "ecr.libcuda.so": "https://public.ecr.aws",
 
   // staging
-  "docker-staging.libcuda.so": dockerHub,
+  // "docker-staging.libcuda.so": dockerHub,
 };
 
 function routeByHosts(host) {
